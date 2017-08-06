@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+html,body {
+    border:0px;
+    padding:0px;
+    margin:0px;
+    
+}
+   .app-container {
+    padding-top:40px;
+    background: #f8de81 !important;
+    height: 100%;
+  }
+
+  body{
+     background: #f8de81 !important;
+  }
+html, body, material-app, md-sidenav-container, .body-content {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+  body,h1,h3,h4,h5,h6, p {
+      font-family: 'Josefin Sans', sans-serif !important;
+ 
+      }

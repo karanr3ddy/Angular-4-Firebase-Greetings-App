@@ -1,0 +1,16 @@
+{
+  "rules": {
+    ".read": true,
+    ".write": "auth != null",
+    "users" : {
+          "$uid": {
+              ".read" : true ,
+                ".write": "$uid === auth.uid ",
+                  "$key" : {
+                   	".validate": "newData.hasChildren(['name', 'quotation']) && newData.child('name').isString() && newData.child('quotation').isString() && newData.child('name').val().length <= 15 && newData.child('quotation').val().length <=160"
+                  }
+                  
+          }
+    }
+  }
+}

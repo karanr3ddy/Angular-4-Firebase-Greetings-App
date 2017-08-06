@@ -1,0 +1,28 @@
+<div class="card-container">
+    <h2 >Your Friend <span style="text-transform:capitalize;     font-weight: 600;
+    color: maroon; font-size: xx-large;">{{(post | async)?.name}} </span>  wishes you</h2>
+    <h1 class="mat-display-1">Happy Friendship day</h1>
+    
+    <div  style="border-radius:10px;   overflow:hidden; width:250px; height:250px; background:url('./assets/thankyou friend.gif') center center; background-size:cover;">
+        
+  </div>
+     <p id="quotation"  *ngIf="(post | async)?.quotation" class="quotation">"{{(post | async)?.quotation}}"</p>  
+  </div>  
+<div class="bottom-bar"> 
+  <div *ngIf="isCreator == true" style="    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    width: 100%;">
+    <span style="margin-right:20px;     font-size: 18px;">Copy this share url </span>
+    <button md-button md-raised-button color="accent" ngxClipboard [cbContent]="shareUrl" ><md-icon>content_copy</md-icon></button>  
+  </div>
+  
+  <div style=" flex-direction: row;
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+    ">  
+      <a  *ngIf="isCreator == false" md-button md-raised-button  color="accent" routerLink="/home"  style="margin-right:20px" >Create yours <md-icon>code</md-icon></a>
+      <a  *ngIf="isCreator == true" md-button md-raised-button  color="color" [href]="sanitizedUrl" data-action="share/whatsapp/share"  >Send via whatsapp <md-icon>send</md-icon></a>
+  </div>
+</div>

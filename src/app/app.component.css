@@ -1,0 +1,24 @@
+md-sidenav {
+  width: 300px;
+} 
+
+.sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+
+ 
+.sidenav {
+      display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: stretch;
+}
+  .sidenav .sidenav-button {
+    width: 100%;
+    padding: 5px;
+  }

@@ -1,0 +1,20 @@
+ 
+  <div style="text-align:center; display:flex; justify-content:center; align-items:center; flex-direction:column;">
+    <h1 class="headline">Happy Friendship day</h1>
+    <h3>Send  wishes your friends</h3>  
+  <div style="border-radius:50%;  overflow:hidden; width:250px; height:250px; background:url('./assets/cat gift.gif') center center; background-size:contain">
+       
+    </div>
+  <br>
+  <div class="controls-container"> 
+    <md-input-container>
+<input mdInput  [(ngModel)]="name" name="name" placeholder="Your Name" type="text" autofocus="true" required #username="ngModel" maxlength="30">
+</md-input-container>
+
+    <md-input-container>
+<textarea mdInput  [(ngModel)]="quotation" name="quotation" placeholder="Your quotation"  maxlength="160">
+</textarea> 
+</md-input-container>
+</div>
+    <button md-button md-raised-button color="accent"  (click)="createWish()"  >Create wishes <md-icon>code</md-icon></button>
+  </div>  

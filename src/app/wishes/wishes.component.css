@@ -1,0 +1,32 @@
+.quotation {
+    background: antiquewhite;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: large;
+    font-style: italic;
+    font-family: 'Inconsolata', monospace !important;
+    
+}
+.card-container {
+    text-align:center; display:flex; justify-content:center; align-items:center; flex-direction:column; 
+    
+}
+.bottom-bar {
+    display:flex; 
+    flex-direction:column;
+     justify-content:space-around;
+      align-items:center;
+       width:100%;
+        bottom:10px;
+        position: fixed;
+}
+@media (min-width:600px) {
+.card-container {
+    height: 100%;
+}
+}
+@media (max-height:581px) {
+.bottom-bar {
+    position: static;
+}
+}
