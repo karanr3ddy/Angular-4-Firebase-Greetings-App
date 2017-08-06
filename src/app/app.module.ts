@@ -11,7 +11,7 @@ import { WishesComponent } from './wishes/wishes.component';
 import { FormsModule } from '@angular/forms';
 import { AbstractControl } from '@angular/forms';
 import { ClipboardModule } from 'ngx-clipboard';
-
+import {firebaseConfig } from './firebaseConfig';
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent  },
   { path: 'wishes/:uid/:key', component: WishesComponent },
@@ -24,14 +24,7 @@ const appRoutes: Routes = [
   },
   { path: '**', component: HomeComponent }
 ];
-const fireConfig = {
-    apiKey: 'AIzaSyBfQlwQ05XM8Vkx4Ko8aBkLwDZKCO3xwOk',
-    authDomain: 'friendship-day-3bd5b.firebaseapp.com',
-    databaseURL: 'https://friendship-day-3bd5b.firebaseio.com',
-    projectId: 'friendship-day-3bd5b',
-    storageBucket: '',
-    messagingSenderId: '640267058908'
-  };
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +34,7 @@ const fireConfig = {
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(fireConfig),
+    AngularFireModule.initializeApp(firebaseConfig),
     BrowserAnimationsModule,
       RouterModule.forRoot(
       appRoutes,
